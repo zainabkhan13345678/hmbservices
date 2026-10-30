@@ -16,7 +16,7 @@ export function ContactForm() {
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Message received</p>
         <h3 className="mt-3 text-2xl font-semibold tracking-tight">Thank you for reaching out.</h3>
         <p className="mt-3 max-w-md text-sm leading-6 text-neutral-600">
-          We will review your message and respond from contact@hmbusinessservices.com.
+          We will review your message and respond from info@hmbservices.cc.
         </p>
         <button
           className="mt-6 text-sm font-semibold underline underline-offset-4"

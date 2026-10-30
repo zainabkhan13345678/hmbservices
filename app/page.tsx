@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, Check, Mail, MapPin, Phone } from 'lucide-react'
 import { ContactForm } from '@/components/contact-form'
+import { MobileNav } from '@/components/mobile-nav'
 
 const services = [
   { number: '01', title: 'Pre-Opening Consulting', description: 'Practical planning support for owners and teams preparing a new hospitality operation.' },
@@ -17,13 +19,15 @@ export default function HomePage() {
     <main className="min-h-screen bg-white text-[#111111]">
       <header className="sticky top-0 z-20 border-b border-neutral-200 bg-white/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-          <Link className="text-sm font-semibold tracking-tight" href="#top">HM Business Services</Link>
+          <Link className="inline-flex items-center" href="#top" aria-label="HM Business Services home">
+            <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grok_1793372659421.jpg-QD5NJajGTz160ptr1ThYLauuCOXbP8.jpeg" alt="HM Business Services" width={180} height={96} priority className="h-auto w-[132px] sm:w-[166px]" />
+          </Link>
           <nav aria-label="Main navigation" className="hidden items-center gap-7 text-sm text-neutral-600 sm:flex">
             <Link className="hover:text-black" href="#about">About</Link>
             <Link className="hover:text-black" href="#services">Services</Link>
             <Link className="hover:text-black" href="#contact">Contact</Link>
           </nav>
-          <Link className="text-sm font-semibold underline underline-offset-4 sm:hidden" href="#contact">Contact</Link>
+          <MobileNav />
         </div>
       </header>
 
@@ -67,10 +71,10 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[#f9f9f9]" id="contact">
-        <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24"><div><SectionLabel>Contact</SectionLabel><h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">Let&apos;s talk about what you&apos;re building.</h2><p className="mt-6 max-w-md text-base leading-7 text-neutral-600">Tell us a little about your project or question. We will be in touch as our practice develops.</p><div className="mt-9 space-y-4 text-sm"><p className="flex items-center gap-3"><Mail size={16} /> contact@hmbusinessservices.com</p><p className="flex items-center gap-3"><Phone size={16} /> Phone number to be filled</p></div></div><ContactForm /></div>
+        <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24"><div><SectionLabel>Contact</SectionLabel><h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">Let&apos;s talk about what you&apos;re building.</h2><p className="mt-6 max-w-md text-base leading-7 text-neutral-600">Tell us a little about your project or question. We will be in touch as our practice develops.</p><div className="mt-9 space-y-4 text-sm"><p className="flex items-center gap-3"><Mail size={16} /><a className="underline underline-offset-4" href="mailto:info@hmbservices.cc">info@hmbservices.cc</a></p><p className="flex items-center gap-3"><Phone size={16} /> Phone number to be filled</p></div></div><ContactForm /></div>
       </section>
 
-      <footer className="border-t border-neutral-200 bg-white"><div className="mx-auto max-w-6xl px-5 py-12 sm:px-8"><div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4"><div><p className="text-sm font-semibold">HM Business Services</p><p className="mt-3 text-xs leading-5 text-neutral-500">Hotel management consulting<br />USA &amp; UK · Pre-launch startup</p></div><div className="text-xs leading-6 text-neutral-500"><p><strong className="font-semibold text-neutral-700">Legal Name:</strong> HM Business Services LLC</p><p><strong className="font-semibold text-neutral-700">Entity Type:</strong> Wyoming Limited Liability Company</p><p><strong className="font-semibold text-neutral-700">Formation Date:</strong> [To be filled]</p><p><strong className="font-semibold text-neutral-700">EIN:</strong> [To be filled]</p></div><div className="text-xs leading-6 text-neutral-500"><p className="flex gap-2"><MapPin className="mt-1 shrink-0" size={13} /><span><strong className="font-semibold text-neutral-700">Registered Agent:</strong> [To be filled]</span></p><p className="mt-2"><strong className="font-semibold text-neutral-700">Operating Address:</strong> [To be filled]</p></div><div className="text-xs leading-6 text-neutral-500"><p><strong className="font-semibold text-neutral-700">Email:</strong> contact@hmbusinessservices.com</p><p><strong className="font-semibold text-neutral-700">Phone:</strong> [To be filled]</p><div className="mt-4 flex gap-4 text-neutral-700"><Link className="underline underline-offset-4" href="/privacy">Privacy</Link><Link className="underline underline-offset-4" href="/terms">Terms</Link></div></div></div><div className="mt-12 border-t border-neutral-200 pt-6 text-xs text-neutral-400">© {new Date().getFullYear()} HM Business Services LLC. All rights reserved.</div></div></footer>
+      <footer className="border-t border-neutral-200 bg-white"><div className="mx-auto max-w-6xl px-5 py-12 sm:px-8"><div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4"><div><Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grok_1793372659421.jpg-QD5NJajGTz160ptr1ThYLauuCOXbP8.jpeg" alt="HM Business Services" width={180} height={96} className="h-auto w-[150px]" /><p className="mt-4 text-xs leading-5 text-neutral-500">Hotel management consulting<br />USA &amp; UK · Pre-launch startup</p></div><div className="text-xs leading-6 text-neutral-500"><p><strong className="font-semibold text-neutral-700">Legal Name:</strong> HM Business Services LLC</p><p><strong className="font-semibold text-neutral-700">Entity Type:</strong> Wyoming Limited Liability Company</p><p><strong className="font-semibold text-neutral-700">Formation Date:</strong> [To be filled]</p><p><strong className="font-semibold text-neutral-700">EIN:</strong> [To be filled]</p></div><div className="text-xs leading-6 text-neutral-500"><p className="flex gap-2"><MapPin className="mt-1 shrink-0" size={13} /><span><strong className="font-semibold text-neutral-700">Registered Agent:</strong> [To be filled]</span></p><p className="mt-2"><strong className="font-semibold text-neutral-700">Operating Address:</strong> [To be filled]</p></div><div className="text-xs leading-6 text-neutral-500"><p><strong className="font-semibold text-neutral-700">Email:</strong> info@hmbservices.cc</p><p><strong className="font-semibold text-neutral-700">Phone:</strong> [To be filled]</p><div className="mt-4 flex gap-4 text-neutral-700"><Link className="underline underline-offset-4" href="/privacy">Privacy</Link><Link className="underline underline-offset-4" href="/terms">Terms</Link></div></div></div><div className="mt-12 border-t border-neutral-200 pt-6 text-xs text-neutral-400">© {new Date().getFullYear()} HM Business Services LLC. All rights reserved.</div></div></footer>
     </main>
   )
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export function LegalPage({ title, children }: { title: string; children: React.ReactNode }) {
@@ -5,7 +6,7 @@ export function LegalPage({ title, children }: { title: string; children: React.
     <main className="min-h-screen bg-white text-[#111111]">
       <header className="border-b border-neutral-200">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-          <Link className="text-sm font-semibold tracking-tight" href="/">HM Business Services</Link>
+          <Link className="inline-flex items-center" href="/" aria-label="HM Business Services home"><Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grok_1793372659421.jpg-QD5NJajGTz160ptr1ThYLauuCOXbP8.jpeg" alt="HM Business Services" width={180} height={96} priority className="h-auto w-[132px]" /></Link>
           <Link className="text-sm text-neutral-600 underline-offset-4 hover:underline" href="/">Back to home</Link>
         </div>
       </header>

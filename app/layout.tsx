@@ -5,6 +5,8 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'HM Business Services | Hotel Management Consulting',
   description: 'HM Business Services LLC provides focused hotel management consulting across the USA and UK.',
+  metadataBase: new URL('https://hmbservices.cc'),
+  alternates: { canonical: '/' },
   generator: 'Next.js',
 }
 
